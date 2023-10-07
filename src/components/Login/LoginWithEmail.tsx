@@ -47,9 +47,10 @@ const LoginWithEmail = () => {
         <PasswordInput
           className="w-full text-xl font-jakarta text-brand-main"
           classNames={{
-            root: "!focus:outline-none !focus:border-brand-main",
+            root: "focus:!outline-none focus:!border-brand-main",
+            input: "focus:!outline-none focus:!border-brand-main",
             innerInput:
-              "text-black-secondary text-lg placeholder:text-lg font-medium !font-jakarta !focus:outline-none !focus:border-brand-main",
+              "text-black-secondary text-lg placeholder:text-lg font-medium !font-jakarta focus:!outline-none focus:!border-brand-main",
           }}
           size="xl"
           radius="md"

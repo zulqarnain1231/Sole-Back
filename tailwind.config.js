@@ -9,6 +9,7 @@ export default {
         },
         black: {
           main: "#00000",
+          secondary: "#2E2C34",
           off: "#84818A",
         },
         white: {

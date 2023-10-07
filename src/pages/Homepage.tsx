@@ -1,7 +1,11 @@
-export default function HomePage() {
+import React from "react";
+
+const Homepage = () => {
   return (
-    <>
-      <h1 className="font-manrope text-success bg-red-600 text-center">Home</h1>
-    </>
+    <div>
+      <h1>Home</h1>
+    </div>
   );
-}
+};
+
+export default Homepage;

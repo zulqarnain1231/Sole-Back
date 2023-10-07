@@ -8,7 +8,7 @@ export default {
           main: "#F2B705",
         },
         black: {
-          main: "#00000",
+          main: "#000",
           secondary: "#2E2C34",
           off: "#84818A",
         },

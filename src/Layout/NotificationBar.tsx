@@ -2,11 +2,16 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { RiNotification3Fill } from "react-icons/ri";
 import { Indicator } from "@mantine/core";
+import { CgMenuRight } from "react-icons/cg";
 
-const NotificationBar = () => {
+type Props = {
+  openDrawer: () => void;
+};
+
+const NotificationBar: React.FC<Props> = ({ openDrawer }: Props) => {
   const Router = useLocation();
   return (
-    <div className="w-full flex items-center justify-between md:px-10 px-4 py-6 shadow-md">
+    <div className="w-full flex items-center justify-between lg:px-10 md:px-6 px-4 py-6 shadow-md">
       <h2 className="text-black-main text-2xl font-medium capitalize">
         {Router.pathname.slice(1, Router.pathname.length)}
       </h2>
@@ -18,6 +23,12 @@ const NotificationBar = () => {
           <RiNotification3Fill className="text-[22px] text-[#B0B7C3]" />
         </Indicator>
       </div>
+      <button
+        onClick={openDrawer}
+        className="h-full md:hidden flex items-center justify-center"
+      >
+        <CgMenuRight className="text-black-main text-2xl" />
+      </button>
     </div>
   );
 };

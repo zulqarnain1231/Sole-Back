@@ -15,6 +15,7 @@ export default {
         white: {
           main: "#fff",
           off: "#FAFAFA",
+          secondary: "#E6E6E6",
         },
         success: "#27AE60",
         danger: "#FC3400",

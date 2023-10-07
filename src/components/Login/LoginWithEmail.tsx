@@ -33,7 +33,7 @@ const LoginWithEmail = () => {
           className="w-full text-xl font-jakarta text-brand-main"
           classNames={{
             input:
-              "text-black-secondary text-lg font-medium placeholder:text-lg !font-jakarta focus:outline-none focus:border-brand-main",
+              "text-black-secondary text-lg font-medium placeholder:text-lg !font-jakarta ",
           }}
           type="email"
           size="xl"
@@ -45,7 +45,7 @@ const LoginWithEmail = () => {
           required
         />
         <PasswordInput
-          className="w-full text-xl font-jakarta text-brand-main"
+          className="w-full text-xl font-jakarta focus:outline-none focus:!border-brand-main"
           classNames={{
             root: "focus:!outline-none focus:!border-brand-main",
             input: "focus:!outline-none focus:!border-brand-main",

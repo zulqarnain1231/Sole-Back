@@ -21,7 +21,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         `}
       >
         <SideBar open={isOpen} toggleIsOpen={toggleDrawer} />
-        <main className="w-full h-full flex flex-col items-center justify-start gap-4 bg-white-off">
+        <main className="w-full h-full flex flex-col items-center justify-start bg-white-off overflow-auto">
           <NotificationBar openDrawer={toggleDrawer} />
           <div className="w-full h-full lg:px-10 md:px-6 px-4 py-6">
             {children}

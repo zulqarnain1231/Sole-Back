@@ -8,6 +8,8 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Layout from "./Layout/Layout";
+import Stores from "./pages/Stores";
+import Settings from "./pages/Settings";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,22 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <HomePage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/stores",
+    element: (
+      <Layout>
+        <Stores />
+      </Layout>
+    ),
+  },
+  {
+    path: "/settings",
+    element: (
+      <Layout>
+        <Settings />
       </Layout>
     ),
   },

@@ -1,7 +1,11 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook, BsDiscord } from "react-icons/bs";
-const LoginWithSocail = () => {
+
+type Props = {
+  setLogin: () => void;
+};
+const LoginWithSocail: React.FC<Props> = ({ setLogin }) => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-8">
       <div className="w-full flex flex-col items-center justify-start gap-4">
@@ -32,7 +36,10 @@ const LoginWithSocail = () => {
         </p>
         <span className="h-[2px] sm:w-[200px] w-[120px] bg-[#EBEAED]"></span>
       </div>
-      <button className="sm:w-[450px] w-full h-[56px] flex items-center justify-center text-black-secondary text-lg font-semibold bg-transparent border-2 border-[#E3E3E3] rounded-[6px]">
+      <button
+        onClick={setLogin}
+        className="sm:w-[450px] w-full h-[56px] flex items-center justify-center text-black-secondary text-lg font-semibold bg-transparent border-2 border-[#E3E3E3] rounded-[8px]"
+      >
         Login with Email
       </button>
       <div className="w-full flex items-center justify-center gap-2">

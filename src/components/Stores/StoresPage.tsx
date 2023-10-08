@@ -34,7 +34,7 @@ const StoresPage = () => {
     },
   ];
   return (
-    <div className="w-full h-[calc(100dvh-134px)] flex flex-col items-center justify-start gap-5 bg-white-main shadow-md rounded-lg md:px-4 px-2 py-6 overflow-auto hide-scrollbar">
+    <div className="w-full sm:h-[calc(100dvh-134px)] h-full flex flex-col items-center justify-start gap-5 bg-white-main shadow-md rounded-lg md:px-4 px-2 py-6 overflow-auto hide-scrollbar">
       <TopBar />
       {stores.map((item: any, index: number) => (
         <StoreCard

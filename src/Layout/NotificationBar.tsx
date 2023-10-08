@@ -38,7 +38,7 @@ const NotificationBar: React.FC<Props> = ({ openDrawer }: Props) => {
     };
   }, [isOpen]);
   return (
-    <div className="w-full flex items-center justify-between lg:px-10 md:px-6 px-4 py-6 shadow-md">
+    <div className="w-full flex items-center justify-between lg:px-10 md:px-6 px-4 py-6 shadow-md fixed md:relative z-50 bg-white-main">
       <h2 className="text-black-main sm:text-3xl text-2xl font-medium capitalize">
         {Router.pathname.slice(1, Router.pathname.length)}
       </h2>
@@ -47,7 +47,7 @@ const NotificationBar: React.FC<Props> = ({ openDrawer }: Props) => {
           2.27 zl / 0.0 zl
         </span>
         <Popover
-          position="bottom"
+          position="bottom-end"
           withArrow
           arrowSize={15}
           arrowRadius={4}
@@ -64,7 +64,7 @@ const NotificationBar: React.FC<Props> = ({ openDrawer }: Props) => {
             </Indicator>
           </Popover.Target>
           <Popover.Dropdown ref={popoverRef}>
-            <div className="sm:w-[400px] w-full flex flex-col items-start justify-start gap-2 py-2 font-manrope">
+            <div className="sm:w-[400px] w-[350px] flex flex-col items-start justify-start gap-2 py-2 font-manrope">
               <div className="w-full flex items-center justify-between">
                 <div className="flex items-center justify-start gap-2">
                   <h2 className="sm:text-2xl text-lg text-black-main font-semibold">
@@ -74,12 +74,15 @@ const NotificationBar: React.FC<Props> = ({ openDrawer }: Props) => {
                     2 New
                   </span>
                 </div>
-                <div className="flex items-center justify-start gap-2">
+                <button
+                  onClick={toggleIsOpen}
+                  className="flex items-center justify-start gap-2"
+                >
                   <LiaCheckDoubleSolid className="text-xl text-brand-main" />
                   <p className="text-brand-main text-center text-base font-medium">
                     Mark as read
                   </p>
-                </div>
+                </button>
               </div>
               <div className="w-full flex items-center justify-between gap-2 border border-white-secondary bg-white-off rounded p-3">
                 <div className="w-full h-full flex flex-col items-start justify-start gap-2">

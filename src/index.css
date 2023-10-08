@@ -17,3 +17,7 @@
     rgba(25, 118, 210, 0.1) 87.16%
   );
 }
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}

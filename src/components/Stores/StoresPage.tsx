@@ -1,33 +1,51 @@
 import React from "react";
 import TopBar from "./TopBar";
-import { FaStar, FaRegStar } from "react-icons/fa";
+import StoreCard from "./StoreCard";
+
 const StoresPage = () => {
+  const stores = [
+    {
+      name: "Samsung Electronics",
+      logo: "/Assets/Stores/Samsung.png",
+      category: "Electronics corporation",
+      cashback: 10,
+      favourite: true,
+    },
+    {
+      name: "Booking.com",
+      logo: "/Assets/Stores/Booking.png",
+      category: "Travel Company",
+      cashback: 5,
+      favourite: true,
+    },
+    {
+      name: "H&M",
+      logo: "/Assets/Home/HM.png",
+      category: "Clothing",
+      cashback: 5,
+      favourite: false,
+    },
+    {
+      name: "Adidas",
+      logo: "/Assets/Home/Adidas.png",
+      category: "Apparel Company",
+      cashback: 5,
+      favourite: false,
+    },
+  ];
   return (
-    <div className="w-full min-h-[calc(100dvh-134px)] flex flex-col items-center justify-start gap-5 bg-white-main shadow-md rounded-lg md:px-4 px-2 py-6">
+    <div className="w-full h-[calc(100dvh-134px)] flex flex-col items-center justify-start gap-5 bg-white-main shadow-md rounded-lg md:px-4 px-2 py-6 overflow-auto hide-scrollbar">
       <TopBar />
-      <div className="w-full flex items-center justify-between gap-4 border border-white-secondary rounded-lg p-4">
-        <div className="w-full h-full flex items-center justify-start gap-5">
-          <FaStar className="text-xl text-brand-main" />
-          <img
-            className="h-[40px] w-[60px] object-contain"
-            src="/Assets/Stores/Samsung.png"
-            alt=""
-          />
-          <div className="h-full flex flex-col items-start justify-start gap-2">
-            <p className="text-black-main text-xl font-medium">
-              Samsung Electronics
-            </p>
-            <p className="text-base text-black-off font-manrope font-medium">
-              Electronics corporation
-            </p>
-          </div>
-        </div>
-        <div className="h-full flex items-center justify-center gap-6">
-          <span className="h-[50px] w-[100px] flex items-center justify-center border-2 border-white-secondary rounded-[36px] shadow-md text-success text-lg font-medium">
-            Upto 10%
-          </span>
-        </div>
-      </div>
+      {stores.map((item: any, index: number) => (
+        <StoreCard
+          key={index}
+          name={item.name}
+          logo={item.logo}
+          cashback={item.cashback}
+          category={item.category}
+          favourite={item.favourite}
+        />
+      ))}
     </div>
   );
 };

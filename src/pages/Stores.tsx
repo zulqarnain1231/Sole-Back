@@ -1,7 +1,11 @@
 import React from "react";
-
+import StoresPage from "../components/Stores/StoresPage";
 const Stores = () => {
-  return <div>Stores</div>;
+  return (
+    <>
+      <StoresPage />
+    </>
+  );
 };
 
 export default Stores;

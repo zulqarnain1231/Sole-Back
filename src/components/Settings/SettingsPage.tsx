@@ -9,7 +9,7 @@ const SettingsPage = () => {
     setIsAccount((prev) => !prev);
   };
   return (
-    <div className="w-full md:h-[calc(100dvh-134px)] h-full flex flex-col items-center justify-start bg-white-main shadow-md rounded-lg overflow-auto hide-scrollbar">
+    <div className="w-full flex flex-col items-center justify-start bg-white-main shadow-md rounded-lg overflow-auto hide-scrollbar">
       <ToggleMenu state={isAccount} setState={toggleIsAccount} />
       {isAccount ? <Account /> : <Categories />}
     </div>

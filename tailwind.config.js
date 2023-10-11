@@ -11,6 +11,7 @@ export default {
           main: "#000",
           secondary: "#2E2C34",
           off: "#84818A",
+          greish: "#E4E7EB",
         },
         white: {
           main: "#fff",

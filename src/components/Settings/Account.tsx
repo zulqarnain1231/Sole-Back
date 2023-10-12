@@ -21,13 +21,13 @@ const Account = () => {
           <MdMarkUnreadChatAlt className="text-black-main text-2xl flex-shrink-0" />
         }
       />
-      <div className="w-full flex items-start justify-start gap-4  rounded-md border-2 border-black-greish sm:p-4 p-2">
-        <IoLanguage className="text-black-main text-2xl flex-shrink-0" />
+      <div className="w-full flex items-start justify-start sm:gap-4 gap-2  rounded-md border-2 border-black-greish sm:p-4 p-2">
+        <IoLanguage className="text-black-main text-2xl flex-shrink-0 sm:inline-block hidden" />
         <div className="w-full flex flex-col items-start justify-start gap-4">
-          <p className="text-black-main text-2xl font-semibold">
+          <p className="text-black-main sm:text-2xl text-xl font-semibold">
             Country/language
           </p>
-          <p className="xl:w-[50%] lg:w-[70%] md:w-[90%] w-full text-black-off text-lg font-medium font-manrope">
+          <p className="xl:w-[50%] lg:w-[70%] md:w-[90%] w-full text-black-off sm:text-lg text-base font-medium font-manrope">
             Choose the language you’d like to use with Soleback. Your language
             is currently set to: English (US)
           </p>
@@ -42,13 +42,13 @@ const Account = () => {
           />
         </div>
       </div>
-      <div className="w-full flex items-start justify-start gap-4  rounded-md border-2 border-black-greish sm:p-4 p-2">
-        <BsFillPersonFill className="text-black-main text-2xl flex-shrink-0" />
+      <div className="w-full flex items-start justify-start sm:gap-4 gap-2  rounded-md border-2 border-black-greish sm:p-4 p-2">
+        <BsFillPersonFill className="text-black-main text-2xl flex-shrink-0 sm:inline-block hidden" />
         <div className="w-full flex flex-col items-start justify-start gap-4">
-          <p className="text-black-main text-2xl font-semibold">
+          <p className="text-black-main sm:text-2xl text-xl font-semibold">
             Account Management
           </p>
-          <p className="text-black-off text-lg font-medium font-manrope">
+          <p className="text-black-off sm:text-lg text-base font-medium font-manrope">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from
           </p>
@@ -58,12 +58,12 @@ const Account = () => {
           </button>
         </div>
       </div>
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex sm:flex-row flex-col items-center sm:justify-between justify-start gap-4">
         <button className="h-[56px] sm:w-[180px] w-full flex items-center justify-center gap-3 text-[#FC3400] sm:text-xl text-lg font-semibold border-2 border-black-greish rounded-lg">
           <HiOutlineLogout className="text-[#FC3400] text-2xl flex-shrink-0" />
           Logout
         </button>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex sm:w-auto w-full sm:flex-row flex-col items-center sm:justify-center justify-start gap-4">
           <button className="sm:w-[150px] w-full h-[56px] flex items-center justify-center text-black-secondary sm:text-xl text-lg font-semibold bg-transparent border-2 border-[#E3E3E3] rounded-[8px]">
             Discard
           </button>

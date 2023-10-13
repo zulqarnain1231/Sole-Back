@@ -31,3 +31,11 @@
   outline: none;
   border-color: #f2b705 !important;
 }
+.btn-gradient {
+  background: radial-gradient(
+      143.58% 143.58% at 0% 0%,
+      #ffd24c 0%,
+      #f2b705 100%
+    ),
+    var(--Primary, #f2b705);
+}

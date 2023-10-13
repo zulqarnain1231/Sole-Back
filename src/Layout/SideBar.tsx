@@ -5,7 +5,7 @@ import { FaStore } from "react-icons/fa";
 import { VscLayoutSidebarLeft } from "react-icons/vsc";
 import { Link, useLocation } from "react-router-dom";
 import { Drawer } from "@mantine/core";
-
+import * as Icons from "../constants/Svg/Icons";
 type Props = {
   open: boolean;
   toggleIsOpen: () => void;

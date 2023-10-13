@@ -5,6 +5,7 @@ import { IoLanguage } from "react-icons/io5";
 import { BsFillPersonFill } from "react-icons/bs";
 import { HiOutlineExternalLink, HiOutlineLogout } from "react-icons/hi";
 import ReactFlagsSelect from "react-flags-select";
+import * as Icons from "../../constants/Svg/Icons";
 
 const Account = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>("");
@@ -13,16 +14,30 @@ const Account = () => {
     <div className="w-full h-full flex flex-col items-center justify-start gap-5 px-4 py-8">
       <CategoryCard
         name="Auto-activate cashback"
-        icon={<MdLaptop className="text-black-main text-2xl flex-shrink-0" />}
+        icon={
+          <Icons.Monitor
+            fill="none"
+            stroke=""
+            ClassName="text-black-main h-[24px] w-[24px] flex-shrink-0 mt-1"
+          />
+        }
       />
       <CategoryCard
         name="Push notification on activation"
         icon={
-          <MdMarkUnreadChatAlt className="text-black-main text-2xl flex-shrink-0" />
+          <Icons.Notification
+            fill="none"
+            stroke=""
+            ClassName="text-black-main h-[24px] w-[24px] flex-shrink-0 mt-1"
+          />
         }
       />
       <div className="w-full flex items-start justify-start sm:gap-4 gap-2  rounded-md border-2 border-black-greish sm:p-4 p-2">
-        <IoLanguage className="text-black-main text-2xl flex-shrink-0 sm:inline-block hidden" />
+        <Icons.Language
+          fill="none"
+          stroke=""
+          ClassName="text-black-main h-[24px] w-[24px] flex-shrink-0 sm:inline-block hidden mt-1"
+        />
         <div className="w-full flex flex-col items-start justify-start gap-4">
           <p className="text-black-main sm:text-2xl text-xl font-semibold">
             Country/language
@@ -43,7 +58,7 @@ const Account = () => {
         </div>
       </div>
       <div className="w-full flex items-start justify-start sm:gap-4 gap-2  rounded-md border-2 border-black-greish sm:p-4 p-2">
-        <BsFillPersonFill className="text-black-main text-2xl flex-shrink-0 sm:inline-block hidden" />
+        <BsFillPersonFill className="text-black-main text-2xl flex-shrink-0 sm:inline-block hidden mt-1" />
         <div className="w-full flex flex-col items-start justify-start gap-4">
           <p className="text-black-main sm:text-2xl text-xl font-semibold">
             Account Management
@@ -60,14 +75,18 @@ const Account = () => {
       </div>
       <div className="w-full flex sm:flex-row flex-col items-center sm:justify-between justify-start gap-4">
         <button className="h-[56px] sm:w-[180px] w-full flex items-center justify-center gap-3 text-[#FC3400] sm:text-xl text-lg font-semibold border-2 border-black-greish rounded-lg">
-          <HiOutlineLogout className="text-[#FC3400] text-2xl flex-shrink-0" />
+          <Icons.Logout
+            stroke=""
+            fill="none"
+            ClassName="text-[#FC3400] h-[28px] w-[28px] flex-shrink-0"
+          />
           Logout
         </button>
         <div className="flex sm:w-auto w-full sm:flex-row flex-col items-center sm:justify-center justify-start gap-4">
           <button className="sm:w-[150px] w-full h-[56px] flex items-center justify-center text-black-secondary sm:text-xl text-lg font-semibold bg-transparent border-2 border-[#E3E3E3] rounded-[8px]">
             Discard
           </button>
-          <button className="sm:w-[150px] w-full h-[56px] flex items-center justify-center text-black-secondary sm:text-xl text-lg font-semibold bg-brand-main rounded-[8px]">
+          <button className="sm:w-[150px] w-full h-[56px] flex items-center justify-center text-black-secondary sm:text-xl text-lg font-semibold bg-brand-main hover:bg-gradient-radial rounded-[8px]">
             Save
           </button>
         </div>

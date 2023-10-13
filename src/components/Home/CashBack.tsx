@@ -4,6 +4,7 @@ import { BiSolidChevronRight } from "react-icons/bi";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { RiSparklingFill } from "react-icons/ri";
 import { Popover } from "@mantine/core";
+import * as Icons from "../../constants/Svg/Icons";
 
 const CashBack = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -13,7 +14,7 @@ const CashBack = () => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-8">
       <img
-        className="w-[200px] h-[130px] object-fill"
+        className="w-[200px] h-[130px] object-fill pointer-events-none"
         src="/Assets/Home/Adidas.png"
         alt=""
       />
@@ -39,11 +40,15 @@ const CashBack = () => {
             onMouseLeave={toggleIsOpen}
             className="h-[54px] sm:w-[320px] w-full flex items-center justify-center gap-6 cursor-pointer border border-white-secondary rounded-[36px] shadow-md px-3"
           >
-            <AiFillDollarCircle className="text-success text-3xl" />
+            <Icons.Dollar
+              fill="none"
+              stroke=""
+              ClassName="text-success h-[30px] w-[30px]"
+            />
             <p className="text-success text-center text-xl font-semibold">
               Upto 10% Cashback
             </p>
-            <IoIosInformationCircleOutline className="text-success text-2xl" />
+            <IoIosInformationCircleOutline className="text-black-off text-2xl" />
           </div>
         </Popover.Target>
         <Popover.Dropdown style={{ pointerEvents: "none" }}>
@@ -72,7 +77,7 @@ const CashBack = () => {
         </Popover.Dropdown>
       </Popover>
 
-      <button className="h-[60px] sm:w-[450px] w-full flex items-center justify-between bg-brand-main text-black-main rounded-xl px-3">
+      <button className="h-[60px] sm:w-[450px] w-full flex items-center justify-between bg-brand-main hover:bg-gradient-radial text-black-main rounded-xl px-3">
         <span></span>
         <span className="h-full flex items-center justify-center gap-2 text-black-main text-xl font-semibold">
           <RiSparklingFill className="text-black-main text-2xl" />

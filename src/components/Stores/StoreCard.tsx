@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
+import * as Icons from "../../constants/Svg/Icons";
 
 type Props = {
   name: string;
@@ -36,9 +37,17 @@ const StoreCard: React.FC<Props> = ({
         <div className="w-full h-full flex items-center justify-start gap-5">
           <button onClick={toggleIsFavourite}>
             {isFavourite ? (
-              <FaStar className="text-xl text-brand-main cursor-pointer flex-shrink-0" />
+              <Icons.FilledStar
+                fill=""
+                stroke=""
+                ClassName="h-[24px] w-[24px] text-brand-main cursor-pointer flex-shrink-0"
+              />
             ) : (
-              <FaRegStar className="text-xl text-black-off cursor-pointer flex-shrink-0" />
+              <Icons.OutlineStar
+                fill="none"
+                stroke=""
+                ClassName="h-[24px] w-[24px] text-black-off cursor-pointer flex-shrink-0"
+              />
             )}
           </button>
 
@@ -63,7 +72,7 @@ const StoreCard: React.FC<Props> = ({
           >
             Upto {cashback}%
           </button>
-          <button className="h-[52px] w-[130px] flex items-center justify-center rounded-xl text-black-main text-lg font-semibold bg-brand-main">
+          <button className="h-[52px] w-[130px] flex items-center justify-center rounded-xl text-black-main text-lg font-semibold bg-brand-main hover:bg-gradient-radial">
             Activate
           </button>
         </div>

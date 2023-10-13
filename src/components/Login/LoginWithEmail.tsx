@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Input, PasswordInput, useMantineTheme, Checkbox } from "@mantine/core";
+import { BsCheckLg } from "react-icons/bs";
 
 const LoginWithEmail = () => {
   const [inputs, setInputs] = useState({
@@ -73,13 +74,16 @@ const LoginWithEmail = () => {
           color="yellow"
           size="md"
         />
-        <p className="text-lg font-semibold font-manrope text-brand-main cursor-pointer">
+        <button
+          type="button"
+          className="text-lg font-semibold font-manrope text-brand-main cursor-pointer"
+        >
           Forget Password
-        </p>
+        </button>
       </div>
       <button
         type="submit"
-        className="w-full h-[56px] flex items-center justify-center text-black-secondary text-lg font-semibold bg-brand-main rounded-[8px]"
+        className="w-full h-[56px] flex items-center justify-center text-black-secondary text-lg font-semibold btn-gradient rounded-[8px]"
       >
         Login
       </button>

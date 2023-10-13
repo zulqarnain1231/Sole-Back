@@ -21,6 +21,10 @@ export default {
         success: "#27AE60",
         danger: "#FC3400",
       },
+      backgroundImage: {
+        "gradient-radial":
+          "radial-gradient(143.58% 143.58% at 0% 0%, #FFD24C 0%, #F2B705 100%)",
+      },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
         jakarta: ["Plus Jakarta Sans", "sans-serif"],

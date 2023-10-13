@@ -4,8 +4,8 @@ const NoCashBack = () => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-10">
       <img
-        className="rounded-full h-[200px] w-[200px] object-cover"
-        src="/Assets/Home/Error.jpg"
+        className="rounded-full h-[200px] w-[200px] object-contain pointer-events-none"
+        src="/Assets/Home/Error.png"
         alt=""
       />
       <h2 className="text-4xl text-center text-black-secondary font-semibold">
@@ -27,4 +27,3 @@ const NoCashBack = () => {
 };
 
 export default NoCashBack;
-

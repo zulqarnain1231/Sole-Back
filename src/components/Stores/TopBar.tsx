@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FiSearch, FiFilter, FiChevronDown } from "react-icons/fi";
+import { GoDotFill } from "react-icons/go";
 import { Checkbox, Popover, RangeSlider, Slider } from "@mantine/core";
 import { FiChevronUp } from "react-icons/fi";
-import { GoDotFill } from "react-icons/go";
+import { PiDotFill } from "react-icons/pi";
+import useClickOutsideDetector from "../../hooks/useClickOutsideDetector";
 
 const TopBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const filterRef = useRef<any>(null);
   const toggleIsOpen = () => {
     setIsOpen((prevvalue) => !prevvalue);
   };
+  useClickOutsideDetector(filterRef, isOpen, () => setIsOpen(false));
   const filters = [
     {
       name: "Electronics",
@@ -73,7 +77,7 @@ const TopBar = () => {
             </span>
           </button>
         </Popover.Target>
-        <Popover.Dropdown>
+        <Popover.Dropdown ref={filterRef}>
           <div className="w-[340px] sm:h-[500px] h-auto overflow-auto flex flex-col items-center justify-start gap-5 py-4 px-3 hide-scrollbar">
             <div className="w-full flex items-center justify-between">
               <div className="flex items-center justify-start gap-2">
@@ -107,6 +111,7 @@ const TopBar = () => {
                     label={item.name}
                     classNames={{
                       input: "checked:bg-brand-main cursor-pointer",
+                      icon: "text-black-main",
                       label: "text-base text-black-off",
                     }}
                     className="!text-lg text-black-secondary font-semibold font-manrope flex items-center"
@@ -133,26 +138,31 @@ const TopBar = () => {
                     15%
                   </span>
                 </div>
-                {/* <Slider
-                  color="blue"
-                  showLabelOnHover={false}
-                  marks={[
-                    { value: 20, label: "20%" },
-                    { value: 50, label: "50%" },
-                    { value: 80, label: "80%" },
-                  ]}
-                />
-                <RangeSlider
-                  classNames={{ thumb: "bg-white-main p-4" }}
-                  color="yellow"
-                  label={null}
-                  defaultValue={[20, 60]}
-                  thumbSize={20}
-                  thumbChildren={[
-                    <GoDotFill className="text-lg text-brand-main" key="1" />,
-                    <GoDotFill className="text-lg text-brand-main" key="2" />,
-                  ]}
-                /> */}
+
+                <div className="w-full my-4">
+                  <RangeSlider
+                    classNames={{
+                      thumb: "bg-white-main p-4 border-none shadow-lg ",
+                    }}
+                    color="yellow"
+                    thumbChildren={[
+                      <GoDotFill
+                        size={20}
+                        className="text-brand-main"
+                        key="1"
+                      />,
+                      <GoDotFill
+                        size={20}
+                        className="text-brand-main"
+                        key="2"
+                      />,
+                    ]}
+                    label={null}
+                    defaultValue={[20, 60]}
+                    thumbSize={20}
+                  />
+                </div>
+
                 <div className="w-full flex sm:flex-row flex-col items-center sm:justify-between justify-start gap-4">
                   <button
                     onClick={toggleIsOpen}

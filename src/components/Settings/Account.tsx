@@ -8,7 +8,7 @@ import ReactFlagsSelect from "react-flags-select";
 import * as Icons from "../../constants/Svg/Icons";
 
 const Account = () => {
-  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedCountry, setSelectedCountry] = useState<string>("US");
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-start gap-5 px-4 py-8">

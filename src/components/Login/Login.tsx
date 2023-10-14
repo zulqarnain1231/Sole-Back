@@ -7,7 +7,7 @@ const LoginPage = () => {
   return (
     <section className="w-full min-h-screen grid lg:grid-cols-[1fr,2fr] gap-10 p-4 font-jakarta">
       {/* left section */}
-      <div className="w-full h-[680px] lg:flex lg:flex-col items-center justify-center hidden rounded-lg bg-[url('/Assets/Login.png')] bg-cover bg-center bg-no-repeat">
+      <div className="w-full h-full lg:flex lg:flex-col items-center justify-center hidden rounded-lg bg-[url('/Assets/Login.png')] bg-cover bg-center bg-no-repeat">
         <img
           className="w-[220px] h-[220px] object-contain pointer-events-none rounded-xl"
           src="/Assets/Logo.png"

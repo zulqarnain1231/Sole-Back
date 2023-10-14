@@ -68,6 +68,7 @@ const LoginWithEmail = () => {
           label="Remmber Me"
           classNames={{
             input: "checked:bg-brand-main cursor-pointer",
+            icon: "text-black-main",
             label: "text-lg",
           }}
           className="!text-lg text-black-secondary font-semibold font-manrope"
@@ -91,9 +92,12 @@ const LoginWithEmail = () => {
         <p className="text-base text-center text-black-off font-medium">
           Don’t have an account?
         </p>
-        <p className="text-base text-center text-brand-main font-medium cursor-pointer">
+        <button
+          type="button"
+          className="text-base text-center text-brand-main font-medium cursor-pointer"
+        >
           Sign Up
-        </p>
+        </button>
       </div>
     </form>
   );

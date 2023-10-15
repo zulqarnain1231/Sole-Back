@@ -27,7 +27,7 @@ const NotificationBar: React.FC<Props> = ({ openDrawer }: Props) => {
       <h2 className="text-black-main sm:text-3xl text-2xl font-medium capitalize">
         {Router.pathname.slice(1, Router.pathname.length)}
       </h2>
-      <div className="h-full flex items-center justify-center gap-5">
+      <div className="h-full sm:flex hidden items-center justify-center gap-5">
         <span className="bg-brand-main py-1 px-2 text-black-main text-center text-sm font-semibold rounded-md">
           2.27 zl / 0.0 zl
         </span>

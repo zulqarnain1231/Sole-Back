@@ -8,7 +8,12 @@ import useClickOutsideDetector from "../../hooks/useClickOutsideDetector";
 
 const TopBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [rangeValues, setRangeValues] = useState<[number, number]>([20, 60]);
   const filterRef = useRef<any>(null);
+
+  const handleRangeChange = (values: [number, number]) => {
+    setRangeValues(values);
+  };
   const toggleIsOpen = () => {
     setIsOpen((prevvalue) => !prevvalue);
   };
@@ -39,11 +44,7 @@ const TopBar = () => {
       checked: false,
     },
   ];
-  const marks = [
-    { value: 20, label: "20%" },
-    { value: 50, label: "50%" },
-    { value: 80, label: "80%" },
-  ];
+
   return (
     <div className="w-full flex sm:flex-row flex-col items-center sm:justify-between justify-start gap-4">
       <div className="w-full h-[50px] flex items-center  justify-start gap-4 px-4 bg-white-off border border-white-secondary rounded-lg">
@@ -132,17 +133,18 @@ const TopBar = () => {
               <div className="w-full flex flex-col items-start justify-start gap-3">
                 <div className="w-full flex items-center justify-between gap-4">
                   <span className="h-[30px] w-[80px] flex items-center justify-start text-black-main text-sm font-semibold rounded-lg border border-white-main bg-[#E9E9E9] px-3">
-                    5%
+                    {rangeValues[0]}%
                   </span>
                   <span className="h-[30px] w-[80px] flex items-center justify-start text-black-main text-sm font-semibold rounded-lg border border-white-main bg-[#E9E9E9] px-3">
-                    15%
+                    {rangeValues[1]}%
                   </span>
                 </div>
 
                 <div className="w-full my-4">
                   <RangeSlider
                     classNames={{
-                      thumb: "bg-white-main p-4 border-none shadow-lg ",
+                      thumb:
+                        "bg-brand-main border-[12px] p-[6px] shadow-lg border-white-main ",
                     }}
                     color="yellow"
                     thumbChildren={[
@@ -158,7 +160,9 @@ const TopBar = () => {
                       />,
                     ]}
                     label={null}
-                    defaultValue={[20, 60]}
+                    defaultValue={rangeValues}
+                    step={1}
+                    onChange={handleRangeChange}
                     thumbSize={20}
                   />
                 </div>

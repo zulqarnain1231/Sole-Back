@@ -49,6 +49,7 @@ const LoginWithEmail = () => {
           className="w-full text-xl font-jakarta focus:outline-none focus:!border-brand-main"
           classNames={{
             root: "focus:!outline-none focus:!border-brand-main",
+            wrapper: "focus:!outline-none focus:!border-brand-main",
             input: "focus:!outline-none focus:!border-brand-main",
             innerInput:
               "text-black-secondary text-lg placeholder:text-lg font-medium !font-jakarta focus:!outline-none focus:!border-brand-main",
